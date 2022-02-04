@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Halcyonvestment</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  </head>
+  <body>
+    <h1>Halcyonvestment</h1>
+    <div style="width: 800px; margin: 0 auto">
+      <canvas id="myChart" width="100" height="100"></canvas>
+    </div>
+    <script>
+      const investmentTotal = 550;
+      const savingsAmount = 2;
+      const foundedDate = '2022-01-02';
+      const purchases = [
+        { date: '2022-01-02', beer: 'Membership founded' },
+        { date: '2022-01-02', beer: 'Halcyon Hazy IPA' },
+        { date: '2022-01-09', beer: 'Halcyon Hazy IPA' },
+        { date: '2022-01-09', beer: 'Halcyon/Something Pilsner' },
+        { date: '2022-01-09', beer: '' },
+        { date: '2022-01-17', beer: 'Halcyon Pilsner' },
+        { date: '2022-01-20', beer: 'Pilsner' },
+        { date: '2022-01-20', beer: 'NZ Pilsner' },
+        { date: '2022-01-20', beer: 'French Pilsner' },
+        { date: '2022-01-20', beer: 'Standard Cold IPA' },
+        { date: '2022-01-27', beer: '' },
+        { date: '2022-01-27', beer: 'Pilsner' },
+        { date: '2022-01-30', beer: 'Pilsner' },
+        { date: '2022-01-30', beer: 'Pilsner' },
+        { date: '2022-02-03', beer: 'Honey Lager' },
+        { date: '2022-02-03', beer: 'IPA' },
+      ];
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          datasets: [
+            {
+              data: purchases.map(function (element, index) {
+                return {
+                  x: element.date,
+                  y: -investmentTotal + index * savingsAmount,
+                };
+              }),
+              //   data: [
+              //     { x: '2022-01-02', y: -550 },
+              //     { x: '2022-01-02', y: -548 },
+              //     { x: '2022-01-09', y: -546 },
+              //     { x: '2022-01-09', y: -544 },
+              //     { x: '2022-01-09', y: -542 },
+              //   ],
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
