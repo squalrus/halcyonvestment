@@ -5,35 +5,52 @@
     <meta name="viewport" content="width=device-width" />
     <title>Halcyonvestment</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: 'Courier New', Courier, monospace;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
   </head>
   <body>
     <h1>Halcyonvestment</h1>
-    <div style="width: 800px; margin: 0 auto">
-      <canvas id="myChart" width="100" height="100"></canvas>
-    </div>
+    <canvas id="myChart" width="600" height="600"></canvas>
     <script>
       const investmentTotal = 550;
       const savingsAmount = 2;
       const foundedDate = '2022-01-02';
+      const beers = [
+        { id: 'calvin-and-hops', name: 'Calvin And Hops IPA', note: '' },
+        { id: 'charmed-sea', name: 'Charmed Sea IPA', note: 'Hazy IPA' },
+        { id: 'friendly-wave', name: 'Friendly Wave IPA', note: '' },
+        { id: 'halcyon-pale', name: 'Halcyon Pale', note: '' },
+        { id: 'honey-lager', name: 'Hawaiian Honey Lager', note: 'Collaboration with Lucky Envelope' },
+        { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
+        { id: 'pilsner', name: 'Pilsner', note: '' },
+        { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
+      ];
       const purchases = [
-        { date: '2022-01-02', beer: 'Membership founded' },
-        { date: '2022-01-02', beer: 'Halcyon Hazy IPA' },
-        { date: '2022-01-09', beer: 'Halcyon Hazy IPA' },
-        { date: '2022-01-09', beer: 'Halcyon/Something Pilsner' },
-        { date: '2022-01-09', beer: '' },
-        { date: '2022-01-17', beer: 'Halcyon Pilsner' },
-        { date: '2022-01-20', beer: 'Pilsner' },
-        { date: '2022-01-20', beer: 'NZ Pilsner' },
-        { date: '2022-01-20', beer: 'French Pilsner' },
-        { date: '2022-01-20', beer: 'Standard Cold IPA' },
-        { date: '2022-01-27', beer: '' },
-        { date: '2022-01-27', beer: 'Pilsner' },
-        { date: '2022-01-30', beer: 'Pilsner' },
-        { date: '2022-01-30', beer: 'Pilsner' },
-        { date: '2022-02-03', beer: 'Honey Lager' },
-        { date: '2022-02-03', beer: 'IPA' },
+        { date: '2022-01-02', beer: 'Membership Founded' },
+        { date: '2022-01-02', beer: 'charmed-sea' },
+        { date: '2022-01-09', beer: 'charmed-sea' },
+        { date: '2022-01-09', beer: 'soft-metal' },
+        { date: '2022-01-09', beer: 'friendly-wave' },
+        { date: '2022-01-17', beer: 'pilsner' },
+        { date: '2022-01-20', beer: 'pilsner' },
+        { date: '2022-01-20', beer: 'nz-pilsner' },
+        { date: '2022-01-20', beer: 'soft-metal' },
+        { date: '2022-01-20', beer: 'Standard Brewing Cold IPA' },
+        { date: '2022-01-27', beer: 'calvin-and-hops' },
+        { date: '2022-01-27', beer: 'pilsner' },
+        { date: '2022-01-30', beer: 'pilsner' },
+        { date: '2022-01-30', beer: 'pilsner' },
+        { date: '2022-02-03', beer: 'honey-lager' },
+        { date: '2022-02-03', beer: 'friendly-wave' },
+        { date: '2022-02-05', beer: 'honey-lager' },
+        { date: '2022-02-05', beer: '' },
       ];
       const ctx = document.getElementById('myChart').getContext('2d');
       const myChart = new Chart(ctx, {
@@ -41,26 +58,36 @@
         data: {
           datasets: [
             {
+              label: 'Amount',
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgb(255, 99, 132)',
+              fill: true,
               data: purchases.map(function (element, index) {
                 return {
                   x: element.date,
                   y: -investmentTotal + index * savingsAmount,
                 };
               }),
-              //   data: [
-              //     { x: '2022-01-02', y: -550 },
-              //     { x: '2022-01-02', y: -548 },
-              //     { x: '2022-01-09', y: -546 },
-              //     { x: '2022-01-09', y: -544 },
-              //     { x: '2022-01-09', y: -542 },
-              //   ],
             },
           ],
         },
         options: {
+          responsive: true,
           scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Investment',
+              },
+            },
             y: {
-              beginAtZero: true,
+              display: true,
+              // beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Date',
+              },
             },
           },
         },
