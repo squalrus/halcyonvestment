@@ -3,20 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Halcyonvestment</title>
+    <title>HALCYONvestment</title>
 
     <style>
       body {
         font-family: 'Courier New', Courier, monospace;
       }
+
       h1 {
         text-align: center;
       }
+
+      #information {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="chart.min.js"></script>
+    <script src="chartjs-adapter-date-fns.bundle.min.js"></script>
   </head>
   <body>
-    <h1>Halcyonvestment</h1>
+    <h1>HALCYONvestment</h1>
+    <p id="information"></p>
     <canvas id="myChart" width="600" height="600"></canvas>
     <script>
       const investmentTotal = 550;
@@ -50,15 +59,17 @@
         { date: '2022-02-03', beer: 'honey-lager' },
         { date: '2022-02-03', beer: 'friendly-wave' },
         { date: '2022-02-05', beer: 'honey-lager' },
-        { date: '2022-02-05', beer: '' },
+        { date: '2022-02-05', beer: 'friendly-wave' },
+        { date: '2022-02-10', beer: 'nz-pilsner' },
       ];
+      document.getElementById('information').innerText = `After an initial investment of $${investmentTotal} each beer purchase receives a discount of $${savingsAmount}. This tracks the payoff of the initial investment.`;
       const ctx = document.getElementById('myChart').getContext('2d');
       const myChart = new Chart(ctx, {
         type: 'line',
         data: {
           datasets: [
             {
-              label: 'Amount',
+              label: 'Current Investment',
               backgroundColor: 'rgba(255, 99, 132, 0.5)',
               borderColor: 'rgb(255, 99, 132)',
               fill: true,
@@ -76,22 +87,35 @@
           scales: {
             x: {
               display: true,
-              title: {
-                display: true,
-                text: 'Investment',
+              type: 'time',
+              time: {
+                unit: 'day',
               },
-            },
-            y: {
-              display: true,
-              // beginAtZero: true,
               title: {
                 display: true,
                 text: 'Date',
               },
             },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Investment',
+              },
+            },
           },
         },
       });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYP21HEQG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-ZYP21HEQG6');
     </script>
   </body>
 </html>
