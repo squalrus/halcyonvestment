@@ -14,6 +14,11 @@
         text-align: center;
       }
 
+      strong {
+        font-size: 1.5em;
+        vertical-align: middle;
+      }
+
       #information {
         text-align: center;
         max-width: 800px;
@@ -27,91 +32,7 @@
     <h1>HALCYONvestment</h1>
     <p id="information"></p>
     <canvas id="myChart" width="600" height="600"></canvas>
-    <script>
-      const investmentTotal = 550;
-      const savingsAmount = 2;
-      const foundedDate = '2022-01-02';
-      const beers = [
-        { id: 'calvin-and-hops', name: 'Calvin And Hops IPA', note: '' },
-        { id: 'charmed-sea', name: 'Charmed Sea IPA', note: 'Hazy IPA' },
-        { id: 'friendly-wave', name: 'Friendly Wave IPA', note: 'West Coast' },
-        { id: 'halcyon-pale', name: 'Halcyon Pale', note: '' },
-        { id: 'honey-lager', name: 'Hawaiian Honey Lager', note: 'Collaboration with Lucky Envelope' },
-        { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
-        { id: 'pilsner', name: 'Pilsner', note: '' },
-        { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
-        { id: 'dry-tiny-ipa', name: 'Dry Tiny Horses', note: 'WC IPA', discount: 1 },
-      ];
-      const purchases = [
-        { date: '2022-01-02', beer: 'Membership Founded' },
-        { date: '2022-01-02', beer: 'charmed-sea' },
-        { date: '2022-01-09', beer: 'charmed-sea' },
-        { date: '2022-01-09', beer: 'soft-metal' },
-        { date: '2022-01-09', beer: 'friendly-wave' },
-        { date: '2022-01-17', beer: 'pilsner' },
-        { date: '2022-01-20', beer: 'pilsner' },
-        { date: '2022-01-20', beer: 'nz-pilsner' },
-        { date: '2022-01-20', beer: 'soft-metal' },
-        { date: '2022-01-20', beer: 'Standard Brewing Cold IPA' },
-        { date: '2022-01-27', beer: 'calvin-and-hops' },
-        { date: '2022-01-27', beer: 'pilsner' },
-        { date: '2022-01-30', beer: 'pilsner' },
-        { date: '2022-01-30', beer: 'pilsner' },
-        { date: '2022-02-03', beer: 'honey-lager' },
-        { date: '2022-02-03', beer: 'friendly-wave' },
-        { date: '2022-02-05', beer: 'honey-lager' },
-        { date: '2022-02-05', beer: 'friendly-wave' },
-        { date: '2022-02-10', beer: 'nz-pilsner' },
-        { date: '2022-02-10', beer: 'friendly-wave' },
-        { date: '2022-02-11', beer: 'soft-metal' },
-        { date: '2022-02-11', beer: 'pilsner' },
-        { date: '2022-02-11', beer: 'dry-tiny-ipa' },
-      ];
-      document.getElementById('information').innerText = `After an initial investment of $${investmentTotal} each beer purchase receives a discount of $${savingsAmount}. This tracks the payoff of the initial investment.`;
-      const ctx = document.getElementById('myChart').getContext('2d');
-      const myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          datasets: [
-            {
-              label: 'Current Investment',
-              backgroundColor: 'rgba(255, 99, 132, 0.5)',
-              borderColor: 'rgb(255, 99, 132)',
-              fill: true,
-              data: purchases.map(function (element, index) {
-                return {
-                  x: element.date,
-                  y: -investmentTotal + index * savingsAmount,
-                };
-              }),
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          scales: {
-            x: {
-              display: true,
-              type: 'time',
-              time: {
-                unit: 'day',
-              },
-              title: {
-                display: true,
-                text: 'Date',
-              },
-            },
-            y: {
-              display: true,
-              title: {
-                display: true,
-                text: 'Investment',
-              },
-            },
-          },
-        },
-      });
-    </script>
+    <script src="dist/main.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYP21HEQG6"></script>
     <script>
