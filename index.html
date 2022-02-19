@@ -8,10 +8,12 @@
     <style>
       body {
         font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        background-image: url(white-waves.png);
       }
 
       h1 {
-        text-align: center;
+        font-size: 3em;
       }
 
       strong {
@@ -19,20 +21,87 @@
         vertical-align: middle;
       }
 
-      #information {
-        text-align: center;
+      .container {
         max-width: 800px;
         margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      @media (min-width: 800px) {
+        .container {
+          padding: 0;
+        }
+      }
+
+      .section {
+        margin: 60px 0;
+      }
+
+      .dataset {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 800px) {
+        .dataset {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      .dataset .dataset__item {
+        border: 2px solid #ccc;
+        background-color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .dataset .dataset__value {
+        font-size: 6em;
+        font-weight: 700;
+      }
+
+      .dataset .dataset__label {
+        font-size: 2em;
+        font-weight: 400;
+        text-align: left;
       }
     </style>
-    <script src="chart.min.js"></script>
-    <script src="chartjs-adapter-date-fns.bundle.min.js"></script>
   </head>
   <body>
-    <h1>HALCYONvestment</h1>
-    <p id="information"></p>
-    <canvas id="myChart" width="600" height="600"></canvas>
-    <script src="dist/main.js"></script>
+    <div class="container">
+      <div class="section">
+        <h1>HALCYONvestment</h1>
+        <p id="information"></p>
+      </div>
+      <div class="section">
+        <div class="dataset">
+          <div id="total-count" class="dataset__item">
+            <span class="dataset__value"></span>
+            <span class="dataset__label">total beers</span>
+          </div>
+          <div id="unique-count" class="dataset__item">
+            <span class="dataset__value"></span>
+            <span class="dataset__label">unique beers</span>
+          </div>
+          <div id="total-oz" class="dataset__item">
+            <span class="dataset__value"></span>
+            <span class="dataset__label">total ozs</span>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <canvas id="beer-chart" width="600" height="600"></canvas>
+      </div>
+      <div class="section">
+        <canvas id="investment-chart" width="600" height="600"></canvas>
+      </div>
+    </div>
+    <script defer src="chart.min.js"></script>
+    <script defer src="chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script defer src="dist/main.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYP21HEQG6"></script>
     <script>
