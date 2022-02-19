@@ -1,21 +1,30 @@
-import { INVESTMENT_TOTAL, DEFAULT_DISCOUNT, SPECIALTY_DISCOUNT, FOUNDED_DATE } from './data/variables';
+import { GLOBAL } from './data/global';
 import { BEERS } from './data/beers';
 import { PURCHASES } from './data/purchases';
-
 import { OPTIONS } from './chart/options';
+import { randomColors } from './chart/colors';
 
-let investmentTotal = -INVESTMENT_TOTAL;
+let investmentTotal = -GLOBAL.INVESTMENT_TOTAL;
+let totalCount = 0;
+let totalList = [];
+let totalOz = 0;
 
+/**
+ * Generated a chartjs consumable dataset from raw data
+ * @returns chart dataset
+ */
 function generateDataset() {
-  let founded = [{ x: FOUNDED_DATE, y: -INVESTMENT_TOTAL }];
+  let founded = [{ x: GLOBAL.FOUNDED_DATE, y: -GLOBAL.INVESTMENT_TOTAL }];
 
-  let dataset = PURCHASES.map(function (element, index) {
+  let dataset = PURCHASES.map(function (element) {
     const beer = BEERS.filter((item) => {
       return item.id == element.beer;
     })[0];
 
-    const discount = beer ? beer.discount || DEFAULT_DISCOUNT : DEFAULT_DISCOUNT;
-    investmentTotal += discount;
+    investmentTotal += element.discount || GLOBAL.DEFAULT_DISCOUNT;
+    totalCount++;
+    totalOz += element.oz || GLOBAL.DEFAULT_OZ;
+    totalList.push(beer ? beer.name : element.beer);
 
     return {
       x: element.date,
@@ -26,8 +35,43 @@ function generateDataset() {
   return founded.concat(dataset);
 }
 
-const ctx = document.getElementById('myChart').getContext('2d');
-const chart = new Chart(ctx, {
+function generateBeerDataset() {
+  let beerCount = {};
+
+  PURCHASES.forEach((element) => {
+    if (typeof beerCount[element.beer] === 'undefined') {
+      beerCount[element.beer] = 1;
+    } else {
+      beerCount[element.beer] = beerCount[element.beer] + 1;
+    }
+  });
+
+  return Object.values(beerCount);
+}
+
+function generateBeerLabels() {
+  let beerCount = {};
+
+  PURCHASES.forEach((element) => {
+    const beer = BEERS.filter((item) => {
+      return item.id == element.beer;
+    })[0];
+
+    const key = beer ? beer.name : element.beer;
+
+    if (typeof beerCount[key] === 'undefined') {
+      beerCount[key] = 1;
+    } else {
+      beerCount[key] = beerCount[key] + 1;
+    }
+  });
+
+  return Object.keys(beerCount);
+}
+
+// Render chart
+const investmentChartContext = document.getElementById('investment-chart').getContext('2d');
+const investmentChart = new Chart(investmentChartContext, {
   type: 'line',
   data: {
     datasets: [
@@ -43,6 +87,29 @@ const chart = new Chart(ctx, {
   options: OPTIONS,
 });
 
+// Render chart
+const beerChartContext = document.getElementById('beer-chart').getContext('2d');
+const beerChart = new Chart(beerChartContext, {
+  type: 'pie',
+  data: {
+    labels: generateBeerLabels(),
+    datasets: [
+      {
+        labels: 'Current Investment',
+        data: generateBeerDataset(),
+        backgroundColor: randomColors(20),
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+  },
+});
+
+// Update data
+document.getElementById('total-count').firstElementChild.innerText = totalCount.toFixed(0);
+document.getElementById('unique-count').firstElementChild.innerText = [...new Set(totalList)].length.toFixed(0);
+document.getElementById('total-oz').firstElementChild.innerText = totalOz.toFixed(0);
 document.getElementById(
   'information'
-).innerHTML = `After an initial investment of <strong>$${INVESTMENT_TOTAL}</strong> in the <a href="https://www.halcyonbrewingco.com/online-store">Halcyon Brewing Founding Lagers</a>, each purchase grants <strong>$${DEFAULT_DISCOUNT}</strong> off pint pours and <strong>$${SPECIALTY_DISCOUNT}</strong> off Halcyon specialty pours. Current investment at <strong>$${investmentTotal}</strong>!`;
+).innerHTML = `After an initial investment of <strong>$${GLOBAL.INVESTMENT_TOTAL}</strong> in the <a href="https://www.halcyonbrewingco.com/online-store">Halcyon Brewing Founding Lagers</a>, each purchase grants a discount. Current investment at <strong>$${investmentTotal}</strong>!`;

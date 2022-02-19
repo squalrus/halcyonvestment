@@ -21,6 +21,12 @@ module.exports = {
     { date: '2022-02-10', beer: 'friendly-wave' },
     { date: '2022-02-11', beer: 'soft-metal' },
     { date: '2022-02-11', beer: 'pilsner' },
-    { date: '2022-02-11', beer: 'dry-tiny-ipa' },
+    { date: '2022-02-11', beer: 'dry-tiny-ipa', oz: 12, discount: 1 },
+    { date: '2022-02-17', beer: 'Flying Lion Rye DIPA', oz: 5, discount: 0.5 },
+    { date: '2022-02-17', beer: 'Postdoc TIPA', oz: 5, discount: 0.5 },
+    { date: '2022-02-17', beer: 'Watts TIPA', oz: 5, discount: 0.5 },
+    { date: '2022-02-17', beer: 'pilsner' },
+    { date: '2022-02-17', beer: 'honey-lager' },
+    { date: '2022-02-17', beer: 'pilsner' },
   ],
 };
