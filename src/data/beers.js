@@ -9,5 +9,6 @@ module.exports = {
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
     { id: 'pilsner', name: 'Pilsner', note: '' },
     { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
+    { id: 'keller-bitter', name: 'KellerBitter', note: '' },
   ],
 };
