@@ -10,5 +10,6 @@ module.exports = {
     { id: 'pilsner', name: 'Pilsner', note: '' },
     { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
     { id: 'keller-bitter', name: 'KellerBitter', note: '' },
+    { id: 'bullet-train', name: 'Bullet Train Pale', note: '' },
   ],
 };
