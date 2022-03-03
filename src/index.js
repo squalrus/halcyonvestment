@@ -4,7 +4,7 @@ import { PURCHASES } from './data/purchases';
 import { OPTIONS } from './chart/options';
 import { randomColors } from './chart/colors';
 
-let investmentTotal = -GLOBAL.INVESTMENT_TOTAL;
+let investmentTotal = 0;
 let totalCount = 0;
 let totalList = [];
 let totalOz = 0;
@@ -14,7 +14,7 @@ let totalOz = 0;
  * @returns chart dataset
  */
 function generateDataset() {
-  let founded = [{ x: GLOBAL.FOUNDED_DATE, y: -GLOBAL.INVESTMENT_TOTAL }];
+  let founded = [{ x: GLOBAL.FOUNDED_DATE, y: 0 }];
 
   let dataset = PURCHASES.map(function (element) {
     const beer = BEERS.filter((item) => {
@@ -77,8 +77,8 @@ const investmentChart = new Chart(investmentChartContext, {
     datasets: [
       {
         label: 'Current Investment',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(34, 179, 57, 0.5)',
+        borderColor: 'rgb(34, 179, 57)',
         fill: true,
         data: generateDataset(),
       },
@@ -112,4 +112,6 @@ document.getElementById('unique-count').firstElementChild.innerText = [...new Se
 document.getElementById('total-oz').firstElementChild.innerText = totalOz.toFixed(0);
 document.getElementById(
   'information'
-).innerHTML = `After an initial investment of <strong>$${GLOBAL.INVESTMENT_TOTAL}</strong> in the <a href="https://www.halcyonbrewingco.com/online-store">Halcyon Brewing Founding Lagers</a>, each purchase grants a discount. Current investment at <strong>$${investmentTotal}</strong>!`;
+).innerHTML = `After an initial investment in the <a href="https://www.halcyonbrewingco.com/online-store">Halcyon Brewing Founding Lagers</a>, each purchase is discounted. Currently saved <strong>$${investmentTotal}</strong> from <strong>${totalCount.toFixed(
+  0
+)} beers</strong> leaving <strong>$${GLOBAL.INVESTMENT_TOTAL - investmentTotal}</strong> remaining to break even!`;
