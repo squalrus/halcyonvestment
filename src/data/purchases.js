@@ -34,5 +34,6 @@ module.exports = {
     { date: '2022-03-04', beer: 'bullet-train' },
     { date: '2022-03-04', beer: 'keller-bitter' },
     { date: '2022-03-06', beer: 'bullet-train' },
+    { date: '2022-03-07', beer: 'bullet-train' },
   ],
 };
