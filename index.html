@@ -43,30 +43,28 @@
         grid-template-columns: 1fr;
       }
 
-      @media (min-width: 800px) {
-        .dataset {
-          grid-template-columns: 1fr 1fr 1fr;
-        }
-      }
-
       .dataset .dataset__item {
         border: 2px solid #ccc;
         background-color: #eee;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 10px;
       }
 
       .dataset .dataset__value {
         font-size: 6em;
         font-weight: 700;
+        text-align: right;
+        width: 47.5%;
       }
 
       .dataset .dataset__label {
         font-size: 2em;
         font-weight: 400;
         text-align: left;
+        width: 47.5%;
+        margin-left: 5%;
       }
     </style>
   </head>
@@ -80,6 +78,16 @@
         <canvas id="investment-chart" width="600" height="600"></canvas>
       </div>
       <div class="section">
+        <h2>Investment details</h2>
+        <div class="dataset">
+          <div id="payoff-date" class="dataset__item">
+            <span class="dataset__value"></span>
+            <span class="dataset__label">payoff date</span>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Beer details</h2>
         <div class="dataset">
           <div id="total-count" class="dataset__item">
             <span class="dataset__value"></span>
