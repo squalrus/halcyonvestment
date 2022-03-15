@@ -64,13 +64,12 @@ module.exports = {
     ];
 
     let colorSet = [];
-    const lastColor = colors[colors.length - 1];
     const colorSkip = ((colors.length - 1) / length).toFixed(0);
 
     for (let x = 0; x < length; x++) {
       colorSet.push(colors[x * colorSkip]);
     }
-    colorSet.push(lastColor);
+    colorSet.push(colors[colors.length - 1]);
 
     return colorSet;
   },

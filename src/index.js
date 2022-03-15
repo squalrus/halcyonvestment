@@ -4,7 +4,7 @@ import { PURCHASES } from './data/purchases';
 import { OPTIONS } from './chart/options';
 import { beerColors } from './chart/colors';
 
-let purchases = {
+let purchaseData = {
   investmentTotal: 0,
   totalCount: 0,
   purchaseList: [],
@@ -26,18 +26,18 @@ function generatePurchasesDataset() {
       return item.id == element.beer;
     })[0];
 
-    purchases.investmentTotal += element.discount || GLOBAL.DEFAULT_DISCOUNT;
-    purchases.totalCount++;
-    purchases.totalOz += element.oz || GLOBAL.DEFAULT_OZ;
-    purchases.purchaseList.push(beer ? beer.name : element.beer);
+    purchaseData.investmentTotal += element.discount || GLOBAL.DEFAULT_DISCOUNT;
+    purchaseData.totalCount++;
+    purchaseData.totalOz += element.oz || GLOBAL.DEFAULT_OZ;
+    purchaseData.purchaseList.push(beer ? beer.name : element.beer);
 
     return {
       x: element.date,
-      y: purchases.investmentTotal,
+      y: purchaseData.investmentTotal,
     };
   });
 
-  purchases.purchaseData = founded.concat(dataset);
+  purchaseData.purchaseData = founded.concat(dataset);
 }
 
 /**
@@ -80,7 +80,7 @@ function generateBeerDataset() {
  */
 function calculatePayoffDate() {
   const ticksSinceFounded = new Date() - new Date(GLOBAL.FOUNDED_DATE);
-  const dollarsSinceFounded = purchases.investmentTotal;
+  const dollarsSinceFounded = purchaseData.investmentTotal;
   const ticksPerDollar = ticksSinceFounded / dollarsSinceFounded;
 
   const ticksPayoff = ticksPerDollar * GLOBAL.INVESTMENT_TOTAL;
@@ -102,7 +102,7 @@ const investmentChart = new Chart(investmentChartContext, {
         backgroundColor: 'rgba(34, 179, 57, 0.5)',
         borderColor: 'rgb(34, 179, 57)',
         fill: true,
-        data: purchases.purchaseData,
+        data: purchaseData.purchaseData,
       },
     ],
   },
@@ -128,9 +128,9 @@ const beerChart = new Chart(beerChartContext, {
 
 // Update data
 document.getElementById('payoff-date').firstElementChild.innerText = calculatePayoffDate();
-document.getElementById('total-count').firstElementChild.innerText = purchases.totalCount.toFixed(0);
-document.getElementById('unique-count').firstElementChild.innerText = [...new Set(purchases.purchaseList)].length.toFixed(0);
-document.getElementById('total-oz').firstElementChild.innerText = purchases.totalOz.toFixed(0);
+document.getElementById('total-count').firstElementChild.innerText = purchaseData.totalCount.toFixed(0);
+document.getElementById('unique-count').firstElementChild.innerText = [...new Set(purchaseData.purchaseList)].length.toFixed(0);
+document.getElementById('total-oz').firstElementChild.innerText = purchaseData.totalOz.toFixed(0);
 document.getElementById('information').innerHTML = `After an initial investment in the <a href="https://www.halcyonbrewingco.com/online-store">Halcyon Brewing Founding Lagers</a>, each purchase is discounted. Currently saved <strong>$${
-  purchases.investmentTotal
-}</strong> from <strong>${purchases.totalCount.toFixed(0)} beers</strong> leaving <strong>$${GLOBAL.INVESTMENT_TOTAL - purchases.investmentTotal}</strong> remaining to break even!`;
+  purchaseData.investmentTotal
+}</strong> from <strong>${purchaseData.totalCount.toFixed(0)} beers</strong> leaving <strong>$${GLOBAL.INVESTMENT_TOTAL - purchaseData.investmentTotal}</strong> remaining to break even!`;
