@@ -8,6 +8,7 @@ module.exports = {
     { id: 'halcyon-pale', name: 'Halcyon Pale' },
     { id: 'hanami-hazy', name: 'Hanami Hazy IPA' },
     { id: 'honey-lager', name: 'Hawaiian Honey Lager', note: 'Collaboration with Lucky Envelope' },
+    { id: 'hydra-ponic', name: 'Hydra-ponic Pale', note: 'Collaboration with Breakthru Brewing' },
     { id: 'keller-bitter', name: 'KellerBitter' },
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
     { id: 'pilsner', name: 'Halcyon Pilsner' },
