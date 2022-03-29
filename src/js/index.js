@@ -126,11 +126,20 @@ const beerChart = new Chart(beerChartContext, {
   options: OPTIONS.BEER_CHART,
 });
 
+/**
+ * Set the value of a DOM element
+ * @param {string} id DOM id
+ * @param {string} val value to set to the DOM element
+ */
+function setDOM(id, val) {
+  document.getElementById(id).firstElementChild.innerText = val;
+}
+
 // Update data
-document.getElementById('payoff-date').firstElementChild.innerText = calculatePayoffDate();
-document.getElementById('total-count').firstElementChild.innerText = purchaseData.totalCount.toFixed(0);
-document.getElementById('unique-count').firstElementChild.innerText = [...new Set(purchaseData.purchaseList)].length.toFixed(0);
-document.getElementById('total-oz').firstElementChild.innerText = purchaseData.totalOz.toFixed(0);
+setDOM('payoff-date', calculatePayoffDate());
+setDOM('total-count', purchaseData.totalCount.toFixed(0));
+setDOM('unique-count', [...new Set(purchaseData.purchaseList)].length.toFixed(0));
+setDOM('total-oz', purchaseData.totalOz.toFixed(1));
 document.getElementById('information').innerHTML = `After an initial investment in the <a href="https://www.halcyonbrewingco.com/online-store">Halcyon Brewing Founding Lagers</a>, each purchase is discounted. Currently saved <strong>$${
   purchaseData.investmentTotal
 }</strong> from <strong>${purchaseData.totalCount.toFixed(0)} beers</strong> leaving <strong>$${GLOBAL.INVESTMENT_TOTAL - purchaseData.investmentTotal}</strong> remaining to break even!`;
