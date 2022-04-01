@@ -52,5 +52,8 @@ module.exports = {
     { date: '2022-03-27', beer: 'soft-metal' },
     { date: '2022-03-27', beer: 'keller-bitter' },
     { date: '2022-03-27', beer: 'hanami-hazy' },
+    { date: '2022-03-31', beer: 'pilsner' },
+    { date: '2022-03-31', beer: 'hydra-ponic' },
+    { date: '2022-03-31', beer: 'keller-bitter' },
   ],
 };
