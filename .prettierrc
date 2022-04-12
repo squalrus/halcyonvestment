@@ -4,7 +4,7 @@
   "singleQuote": true,
   "overrides": [
     {
-      "files": ["*.scss"],
+      "files": ["*.scss", "*.html"],
       "options": {
         "tabWidth": 4
       }
