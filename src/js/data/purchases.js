@@ -60,5 +60,7 @@ module.exports = {
     { date: '2022-04-07', beer: 'keller-bitter' },
     { date: '2022-04-07', beer: 'pilsner' },
     { date: '2022-04-07', beer: 'pilsner' },
+    { date: '2022-04-09', beer: 'we-say-gay' },
+    { date: '2022-04-09', beer: 'we-say-gay' },
   ],
 };
