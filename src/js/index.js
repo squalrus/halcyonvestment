@@ -14,6 +14,11 @@ let purchaseData = {
 
 let beerData = {};
 
+let drinkingData = {
+  wetDays: 0,
+  dryDays: 0,
+};
+
 /**
  * Generates a chartjs consumable dataset from raw data
  * @returns chart dataset
@@ -89,8 +94,46 @@ function calculatePayoffDate() {
   return payoffDate.toDateString();
 }
 
+/**
+ * Calculates the number of days between membership date and today
+ * @returns number of days as a member
+ */
+function calculateDaysInvested() {
+  const millisecondsInDay = 1000 * 60 * 60 * 24;
+  const diff = new Date().getTime() - new Date(GLOBAL.FOUNDED_DATE).getTime();
+
+  return (diff / millisecondsInDay).toFixed(0);
+}
+
+/**
+ * Calculate number of wet vs dry days
+ * @returns updated drinkingData object
+ */
+function calculateStreaks() {
+  const startDate = new Date(GLOBAL.FOUNDED_DATE);
+  const today = new Date();
+  let tempDate = startDate;
+
+  while (tempDate.toDateString() !== today.toDateString()) {
+    let isMatch = !!PURCHASES.filter((item) => {
+      return new Date(item.date).toDateString() == tempDate.toDateString();
+    }).length;
+
+    if (isMatch) {
+      drinkingData.wetDays++;
+    } else {
+      drinkingData.dryDays++;
+    }
+
+    tempDate.setDate(tempDate.getDate() + 1);
+  }
+
+  return drinkingData;
+}
+
 generatePurchasesDataset();
 generateBeerDataset();
+calculateStreaks();
 
 // Render investment chart
 const investmentChartContext = document.getElementById('investment-chart').getContext('2d');
@@ -135,11 +178,18 @@ function setDOM(id, val) {
   document.getElementById(id).firstElementChild.innerText = val;
 }
 
-// Update data
+// Update visual beer data
 setDOM('payoff-date', calculatePayoffDate());
+setDOM('days-invested', calculateDaysInvested());
+
+// Update visual beer data
 setDOM('total-count', purchaseData.totalCount.toFixed(0));
 setDOM('unique-count', [...new Set(purchaseData.purchaseList)].length.toFixed(0));
 setDOM('total-oz', purchaseData.totalOz.toFixed(1));
 document.getElementById('information').innerHTML = `After an initial investment in the <a href="https://www.halcyonbrewingco.com/online-store">Halcyon Brewing Founding Lagers</a>, each purchase is discounted. Currently saved <strong>$${
   purchaseData.investmentTotal
 }</strong> from <strong>${purchaseData.totalCount.toFixed(0)} beers</strong> leaving <strong>$${GLOBAL.INVESTMENT_TOTAL - purchaseData.investmentTotal}</strong> remaining to break even!`;
+
+// Update visual drinking data
+setDOM('wet-days', drinkingData.wetDays.toFixed(0));
+setDOM('dry-days', drinkingData.dryDays.toFixed(0));
