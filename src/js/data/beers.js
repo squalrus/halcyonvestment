@@ -5,7 +5,6 @@ module.exports = {
     { id: 'charmed-sea', name: 'Charmed Sea Hazy IPA', note: 'Hazy IPA' },
     { id: 'dry-tiny-ipa', name: 'Dry Tiny Horses', note: 'WC IPA' },
     { id: 'friendly-wave', name: 'Friendly Wave IPA', note: 'West Coast' },
-    { id: 'halcyon-pale', name: 'Halcyon Pale' },
     { id: 'hanami-hazy', name: 'Hanami Hazy IPA' },
     { id: 'honey-lager', name: 'Hawaiian Honey Lager', note: 'Collaboration with Lucky Envelope' },
     { id: 'hydra-ponic', name: 'Hydra-ponic Pale', note: 'Collaboration with Breakthru Brewing' },
