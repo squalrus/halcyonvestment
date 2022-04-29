@@ -67,5 +67,10 @@ module.exports = {
     { date: '2022-04-13', beer: 'we-say-gay' },
     { date: '2022-04-14', beer: 'we-say-gay' },
     { date: '2022-04-14', beer: 'soft-metal' },
+    { date: '2022-04-21', beer: 'urban-hike' },
+    { date: '2022-04-21', beer: 'we-say-gay' },
+    { date: '2022-04-28', beer: 'our-good-friends' },
+    { date: '2022-04-28', beer: 'Chainline Czech Pilsner' },
+    { date: '2022-04-28', beer: 'we-say-gay' },
   ],
 };
