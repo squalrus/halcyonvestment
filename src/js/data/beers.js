@@ -10,8 +10,10 @@ module.exports = {
     { id: 'hydra-ponic', name: 'Hydra-ponic Pale', note: 'Collaboration with Breakthru Brewing' },
     { id: 'keller-bitter', name: 'KellerBitter' },
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
+    { id: 'our-good-friends', name: 'Our Good Friends', note: 'Dark Lager, Collaboration with Standard' },
     { id: 'pilsner', name: 'Halcyon Pilsner' },
     { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
+    { id: 'urban-hike', name: 'Urban Hike', note: 'Hoppy Rice Lager' },
     { id: 'we-say-gay', name: 'We Say Gay' },
   ],
 };
