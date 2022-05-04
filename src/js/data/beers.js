@@ -13,6 +13,7 @@ module.exports = {
     { id: 'our-good-friends', name: 'Our Good Friends', note: 'Dark Lager, Collaboration with Standard' },
     { id: 'pilsner', name: 'Halcyon Pilsner' },
     { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
+    { id: 'suit-and-tie', name: 'Suit and Tie', note: 'CDA, Collaboration with Big Time' },
     { id: 'urban-hike', name: 'Urban Hike', note: 'Hoppy Rice Lager' },
     { id: 'we-say-gay', name: 'We Say Gay' },
   ],

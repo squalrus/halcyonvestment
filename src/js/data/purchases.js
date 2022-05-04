@@ -70,7 +70,12 @@ module.exports = {
     { date: '2022-04-21', beer: 'urban-hike' },
     { date: '2022-04-21', beer: 'we-say-gay' },
     { date: '2022-04-28', beer: 'our-good-friends' },
-    { date: '2022-04-28', beer: 'Chainline Czech Pilsner' },
+    { date: '2022-04-28', beer: 'Polaris Chainline Czech Pilsner' },
     { date: '2022-04-28', beer: 'we-say-gay' },
+    { date: '2022-05-01', beer: 'suit-and-tie' },
+    { date: '2022-05-01', beer: 'we-say-gay' },
+    { date: '2022-05-01', beer: 'our-good-friends' },
+    { date: '2022-05-03', beer: 'bullet-train' },
+    { date: '2022-05-03', beer: 'suit-and-tie' },
   ],
 };
