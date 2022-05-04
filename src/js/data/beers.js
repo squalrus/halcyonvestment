@@ -7,6 +7,7 @@ module.exports = {
     { id: 'friendly-wave', name: 'Friendly Wave IPA', note: 'West Coast' },
     { id: 'hanami-hazy', name: 'Hanami Hazy IPA' },
     { id: 'honey-lager', name: 'Hawaiian Honey Lager', note: 'Collaboration with Lucky Envelope' },
+    { id: 'hop-grinder', name: 'Hop Grinder', notes: 'Hazy IPA' },
     { id: 'hydra-ponic', name: 'Hydra-ponic Pale', note: 'Collaboration with Breakthru Brewing' },
     { id: 'keller-bitter', name: 'KellerBitter' },
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
