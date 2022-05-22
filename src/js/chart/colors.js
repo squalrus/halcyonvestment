@@ -64,10 +64,10 @@ module.exports = {
     ];
 
     let colorSet = [];
-    const colorSkip = ((colors.length - 1) / length).toFixed(0);
+    const colorSkip = (colors.length - 1) / length;
 
     for (let x = 0; x < length; x++) {
-      colorSet.push(colors[x * colorSkip]);
+      colorSet.push(colors[Math.floor(x * colorSkip)]);
     }
     colorSet.push(colors[colors.length - 1]);
 
