@@ -78,5 +78,9 @@ module.exports = {
     { date: '2022-05-03', beer: 'bullet-train' },
     { date: '2022-05-03', beer: 'suit-and-tie' },
     { date: '2022-05-17', beer: 'hop-grinder' },
+    { date: '2022-05-19', beer: 'hop-grinder' },
+    { date: '2022-05-19', beer: 'suit-and-tie' },
+    { date: '2022-05-19', beer: 'our-good-friends' },
+    { date: '2022-05-21', beer: 'hop-grinder' },
   ],
 };
