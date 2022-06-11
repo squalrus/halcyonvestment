@@ -84,5 +84,9 @@ module.exports = {
     { date: '2022-05-21', beer: 'hop-grinder' },
     { date: '2022-06-01', beer: 'hop-grinder' },
     { date: '2022-06-01', beer: 'suit-and-tie' },
+    { date: '2022-06-08', beer: 'suit-and-tie' },
+    { date: '2022-06-08', beer: 'urban-hike' },
+    { date: '2022-06-08', beer: 'hop-grinder' },
+    { date: '2022-06-08', beer: 'keller-bitter', oz: 9.6, discount: 1 },
   ],
 };
