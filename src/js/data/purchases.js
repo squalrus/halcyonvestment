@@ -99,5 +99,11 @@ module.exports = {
     { date: '2022-07-21', beer: 'suit-and-tie' },
     { date: '2022-07-21', beer: 'frosted-wheat' },
     { date: '2022-07-21', beer: 'keller-bitter' },
+    { date: '2022-08-18', beer: 'frosted-wheat' },
+    { date: '2022-08-18', beer: 'casino-tour' },
+    { date: '2022-08-18', beer: 'suit-and-tie' },
+    { date: '2022-08-19', beer: 'frosted-wheat' },
+    { date: '2022-08-19', beer: 'casino-tour' },
+    { date: '2022-08-19', beer: 'suit-and-tie' },
   ],
 };
