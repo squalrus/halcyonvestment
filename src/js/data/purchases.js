@@ -105,5 +105,10 @@ module.exports = {
     { date: '2022-08-19', beer: 'frosted-wheat' },
     { date: '2022-08-19', beer: 'casino-tour' },
     { date: '2022-08-19', beer: 'suit-and-tie' },
+    { date: '2022-08-27', beer: 'frosted-wheat' },
+    { date: '2022-09-02', beer: 'good-vibes' },
+    { date: '2022-09-02', beer: 'sparkling-clusters' },
+    { date: '2022-09-02', beer: 'highly-classified' },
+    { date: '2022-09-05', beer: 'highly-classified' },
   ],
 };
