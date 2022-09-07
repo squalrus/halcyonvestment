@@ -80,6 +80,15 @@ function generateBeerDataset() {
 }
 
 /**
+ * Calculates (actually just returns) the investment date
+ * @returns investment date
+ */
+function calculateInvestmentDate() {
+  const investmentDate = new Date(GLOBAL.FOUNDED_DATE);
+  return investmentDate.toDateString();
+}
+
+/**
  * Calculates the anticipated payoff date based on amount spent over the current time
  * @returns estimated payoff date
  */
@@ -107,7 +116,7 @@ function calculateDaysInvested() {
 
 /**
  * Calculates the percentage paid off to the final amount
- * @returns number of days as a member
+ * @returns percent paid off, by amount
  */
 function calculatePercentPaidOff() {
   return ((purchaseData.investmentTotal / GLOBAL.INVESTMENT_TOTAL) * 100).toFixed(1) + '%';
@@ -187,6 +196,7 @@ function setDOM(id, val) {
 }
 
 // Update visual beer data
+setDOM('investment-date', calculateInvestmentDate());
 setDOM('days-invested', calculateDaysInvested());
 setDOM('payoff-percent', calculatePercentPaidOff());
 setDOM('payoff-date', calculatePayoffDate());
