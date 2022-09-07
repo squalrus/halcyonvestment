@@ -110,7 +110,7 @@ function calculateDaysInvested() {
  * @returns number of days as a member
  */
 function calculatePercentPaidOff() {
-  return ((purchaseData.investmentTotal / GLOBAL.INVESTMENT_TOTAL) * 100).toFixed(0) + '%';
+  return ((purchaseData.investmentTotal / GLOBAL.INVESTMENT_TOTAL) * 100).toFixed(1) + '%';
 }
 
 /**
