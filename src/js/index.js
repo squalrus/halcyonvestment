@@ -106,6 +106,14 @@ function calculateDaysInvested() {
 }
 
 /**
+ * Calculates the percentage paid off to the final amount
+ * @returns number of days as a member
+ */
+function calculatePercentPaidOff() {
+  return ((purchaseData.investmentTotal / GLOBAL.INVESTMENT_TOTAL) * 100).toFixed(0) + '%';
+}
+
+/**
  * Calculate number of wet vs dry days
  * @returns updated drinkingData object
  */
@@ -179,8 +187,9 @@ function setDOM(id, val) {
 }
 
 // Update visual beer data
-setDOM('payoff-date', calculatePayoffDate());
 setDOM('days-invested', calculateDaysInvested());
+setDOM('payoff-percent', calculatePercentPaidOff());
+setDOM('payoff-date', calculatePayoffDate());
 
 // Update visual beer data
 setDOM('total-count', purchaseData.totalCount.toFixed(0));
