@@ -110,5 +110,7 @@ module.exports = {
     { date: '2022-09-02', beer: 'sparkling-clusters' },
     { date: '2022-09-02', beer: 'highly-classified' },
     { date: '2022-09-05', beer: 'highly-classified' },
+    { date: '2022-09-08', beer: 'highly-classified' },
+    { date: '2022-09-08', beer: 'suit-and-tie' },
   ],
 };
