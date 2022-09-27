@@ -21,6 +21,7 @@ module.exports = {
     { id: 'sparkling-clusters', name: 'Sparkling Clusters', note: 'Hazy IPA' },
     { id: 'suit-and-tie', name: 'Suit and Tie', note: 'CDA, Collaboration with Big Time' },
     { id: 'urban-hike', name: 'Urban Hike', note: 'Hoppy Rice Lager' },
+    { id: 'very-serious-young-man', name: 'Very Serious Young Man', note: 'Double IPA' },
     { id: 'we-say-gay', name: 'We Say Gay' },
   ],
 };

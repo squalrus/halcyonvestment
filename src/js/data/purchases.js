@@ -114,5 +114,9 @@ module.exports = {
     { date: '2022-09-08', beer: 'suit-and-tie' },
     { date: '2022-09-16', beer: 'sparkling-clusters' },
     { date: '2022-09-16', beer: 'highly-classified' },
+    { date: '2022-09-22', beer: 'highly-classified' },
+    { date: '2022-09-22', beer: 'good-vibes' },
+    { date: '2022-09-23', beer: 'very-serious-young-man' },
+    { date: '2022-09-24', beer: 'pilsner' },
   ],
 };
