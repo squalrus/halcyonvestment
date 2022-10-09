@@ -118,5 +118,6 @@ module.exports = {
     { date: '2022-09-22', beer: 'good-vibes' },
     { date: '2022-09-23', beer: 'very-serious-young-man' },
     { date: '2022-09-24', beer: 'pilsner' },
+    { date: '2022-10-08', beer: 'so-fresh-so-green' },
   ],
 };
