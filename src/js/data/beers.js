@@ -17,6 +17,8 @@ module.exports = {
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
     { id: 'our-good-friends', name: 'Our Good Friends', note: 'Dark Lager, Collaboration with Standard' },
     { id: 'pilsner', name: 'Halcyon Pilsner' },
+    { id: 'save-the-snake', name: 'Save the Snake', note: 'Lager, Collaboration with Stoup and WA Wild' },
+    { id: 'so-fresh-so-green', name: 'So Fresh and So Green', note: 'Dry Hopped, Collaboration with Big Time Brewery' },
     { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
     { id: 'sparkling-clusters', name: 'Sparkling Clusters', note: 'Hazy IPA' },
     { id: 'suit-and-tie', name: 'Suit and Tie', note: 'CDA, Collaboration with Big Time' },
