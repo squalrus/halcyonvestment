@@ -120,5 +120,8 @@ module.exports = {
     { date: '2022-09-24', beer: 'pilsner' },
     { date: '2022-10-08', beer: 'so-fresh-so-green' },
     { date: '2022-10-10', beer: 'save-the-snake' },
+    { date: '2022-10-13', beer: 'so-fresh-so-green' },
+    { date: '2022-10-13', beer: 'save-the-snake' },
+    { date: '2022-10-13', beer: 'so-fresh-so-green' },
   ],
 };
