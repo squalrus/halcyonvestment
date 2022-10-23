@@ -123,5 +123,6 @@ module.exports = {
     { date: '2022-10-13', beer: 'so-fresh-so-green' },
     { date: '2022-10-13', beer: 'save-the-snake' },
     { date: '2022-10-13', beer: 'so-fresh-so-green' },
+    { date: '2022-10-23', beer: 'so-fresh-so-green' },
   ],
 };
