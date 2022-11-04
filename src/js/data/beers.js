@@ -1,5 +1,6 @@
 module.exports = {
   BEERS: [
+    { id: 'boolong-hand', name: 'Boolong Hand', note: 'NZ Pilsner w/ Oolong and Buddahs hand tea' },
     { id: 'bullet-train', name: 'Bullet Train Pale' },
     { id: 'calvin-and-hops', name: 'Calvin And Hops IPA' },
     { id: 'casino-tour', name: 'Casino Tour', note: 'NZ Keller Bier, Collaboration with Burke Gilman' },
@@ -14,6 +15,7 @@ module.exports = {
     { id: 'hop-grinder', name: 'Hop Grinder', notes: 'Hazy IPA' },
     { id: 'hydra-ponic', name: 'Hydra-ponic Pale', note: 'Collaboration with Breakthru Brewing' },
     { id: 'keller-bitter', name: 'KellerBitter' },
+    { id: 'kiwi-fisher', name: 'Kiwi Fisher', note: 'NZ Pilsner' },
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
     { id: 'our-good-friends', name: 'Our Good Friends', note: 'Dark Lager, Collaboration with Standard' },
     { id: 'pilsner', name: 'Halcyon Pilsner' },
