@@ -124,5 +124,10 @@ module.exports = {
     { date: '2022-10-13', beer: 'save-the-snake' },
     { date: '2022-10-13', beer: 'so-fresh-so-green' },
     { date: '2022-10-23', beer: 'so-fresh-so-green' },
+    { date: '2022-10-29', beer: 'kiwi-fisher' },
+    { date: '2022-10-30', beer: 'boolong-tea' },
+    { date: '2022-10-30', beer: 'very-serious-young-man' },
+    { date: '2022-10-30', beer: 'very-serious-young-man' },
+    { date: '2022-11-03', beer: 'highly-classified' },
   ],
 };
