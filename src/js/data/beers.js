@@ -16,6 +16,7 @@ module.exports = {
     { id: 'hydra-ponic', name: 'Hydra-ponic Pale', note: 'Collaboration with Breakthru Brewing' },
     { id: 'keller-bitter', name: 'KellerBitter' },
     { id: 'kiwi-fisher', name: 'Kiwi Fisher', note: 'NZ Pilsner' },
+    { id: 'mark-of-the-yeast', name: 'Mark of the Yeast', note: 'Hazy IPA' },
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
     { id: 'our-good-friends', name: 'Our Good Friends', note: 'Dark Lager, Collaboration with Standard' },
     { id: 'pilsner', name: 'Halcyon Pilsner' },

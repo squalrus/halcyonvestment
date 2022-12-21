@@ -133,5 +133,7 @@ module.exports = {
     { date: '2022-12-03', beer: 'bullet-train' },
     { date: '2022-12-04', beer: 'bullet-train' },
     { date: '2022-12-04', beer: 'kiwi-fisher' },
+    { date: '2022-12-16', beer: 'pilsner' },
+    { date: '2022-12-17', beer: 'mark-of-the-yeast' },
   ],
 };
