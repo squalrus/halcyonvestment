@@ -1,5 +1,4 @@
-module.exports = {
-  BEERS: [
+const BeerData = [
     { id: 'boolong-hand', name: 'Boolong Hand', note: 'NZ Pilsner w/ Oolong and Buddahs hand tea' },
     { id: 'bullet-train', name: 'Bullet Train Pale' },
     { id: 'calvin-and-hops', name: 'Calvin And Hops IPA' },
@@ -28,5 +27,11 @@ module.exports = {
     { id: 'urban-hike', name: 'Urban Hike', note: 'Hoppy Rice Lager' },
     { id: 'very-serious-young-man', name: 'Very Serious Young Man', note: 'Double IPA' },
     { id: 'we-say-gay', name: 'We Say Gay' },
-  ],
-};
+];
+
+function GetBeerName(beerId) {
+    const beer = BeerData.find(({ id }) => id === beerId);
+    return typeof beer === 'object' ? beer.name : beer;
+}
+
+export default { BeerData, GetBeerName };

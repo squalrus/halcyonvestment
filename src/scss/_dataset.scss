@@ -1,0 +1,38 @@
+.dataset {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+.dataset__item {
+    align-items: center;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    display: flex;
+    padding: 10px;
+    gap: 5%;
+}
+
+.dataset__value {
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: right;
+    width: 62.5%;
+
+    @media (min-width: 800px) {
+        font-size: 6em;
+    }
+}
+.dataset__value--small {
+    font-size: 1.8em;
+}
+
+.dataset__label {
+    font-size: 1.25em;
+    font-weight: 400;
+    text-align: left;
+    width: 32.5%;
+
+    @media (min-width: 800px) {
+        font-size: 2em;
+    }
+}

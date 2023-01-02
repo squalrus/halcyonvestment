@@ -1,13 +1,15 @@
 {
   "name": "halcyonvestment",
+  "source": "src/index.html",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack && npm run scss && npm run copy-html && npm run copy-img && npm run copy-opensource",
-    "copy-html": "copyfiles -f ./src/html/index.html ./dist",
-    "copy-img": "copyfiles -f ./src/img/* ./dist/img",
-    "copy-opensource": "copyfiles -f ./src/opensource/* ./dist/js",
-    "scss": "sass ./src/scss/style.scss ./dist/css/style.css"
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "staticFiles": {
+    "staticPath": "src/img",
+    "staticOutPath": "img"
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,18 @@
     "url": "https://github.com/squalrus/halcyonvestment/issues"
   },
   "homepage": "https://github.com/squalrus/halcyonvestment#readme",
+  "dependencies": {
+    "chart.js": "^4.1.1",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "chartjs-react": "^4.0.1",
+    "date-fns": "^2.29.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "devDependencies": {
-    "copyfiles": "^2.4.1",
-    "sass": "^1.49.9",
-    "webpack": "^5.69.0",
-    "webpack-cli": "^4.9.2"
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2",
+    "parcel-reporter-static-files-copy": "^1.4.0",
+    "process": "^0.11.10"
   }
 }
