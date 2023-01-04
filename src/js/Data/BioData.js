@@ -142,6 +142,8 @@ const BioData = {
         { date: '2022-12-24', beer: 'pilsner' },
         { date: '2022-12-24', beer: 'bullet-train' },
         { date: '2022-12-26', beer: 'mark-of-the-yeast' },
+        { date: '2023-01-02', beer: 'mark-of-the-yeast' },
+        { date: '2023-01-02', beer: 'bullet-train' },
     ],
 };
 
