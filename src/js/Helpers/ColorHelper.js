@@ -1,4 +1,4 @@
-function BeerColors(length) {
+export function ColorHelper(length) {
     const colors = [
         '#100c00',
         '#181200',
@@ -72,5 +72,3 @@ function BeerColors(length) {
 
     return colorSet;
 }
-
-export default BeerColors;
