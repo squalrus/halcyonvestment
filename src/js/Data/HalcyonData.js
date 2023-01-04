@@ -1,4 +1,10 @@
-const BeerData = [
+export const HalcyonDefaults = {
+    DEFAULT_DISCOUNT: 2,
+    DEFAULT_OZ: 19.2,
+    INVESTMENT_TOTAL: 550,
+};
+
+export const BeerData = [
     { id: 'boolong-hand', name: 'Boolong Hand', note: 'NZ Pilsner w/ Oolong and Buddahs hand tea' },
     { id: 'bullet-train', name: 'Bullet Train Pale' },
     { id: 'calvin-and-hops', name: 'Calvin And Hops IPA' },
@@ -29,9 +35,7 @@ const BeerData = [
     { id: 'we-say-gay', name: 'We Say Gay' },
 ];
 
-function GetBeerName(beerId) {
+export function GetBeerName(beerId) {
     const beer = BeerData.find(({ id }) => id === beerId);
     return typeof beer === 'object' ? beer.name : beer;
 }
-
-export default { BeerData, GetBeerName };

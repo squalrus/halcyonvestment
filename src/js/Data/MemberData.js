@@ -1,4 +1,4 @@
-const BioData = {
+export const MemberData = {
     name: 'Chad',
     memberId: 19,
     foundedDate: '2022-01-02',
@@ -146,5 +146,3 @@ const BioData = {
         { date: '2023-01-02', beer: 'bullet-train' },
     ],
 };
-
-export default BioData;

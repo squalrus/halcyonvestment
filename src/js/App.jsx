@@ -1,7 +1,6 @@
-import BeerData from './Data/BeerData';
-import BioData from './Data/BioData';
-import FounderData from './Data/FounderData';
-import { calculateInvestmentDate, calculateDaysInvested, calculatePercentPaidOff, calculatePayoffDate, calculateWetDays, calculateDryDays } from './Helpers/PurchaseHelpers';
+import { HalcyonDefaults, GetBeerName } from './Data/HalcyonData';
+import { MemberData } from './Data/MemberData';
+import { PurchaseHelper } from './Helpers/PurchaseHelper';
 
 import Bio from './Components/Bio';
 import ChartBeer from './Components/ChartBeer';
@@ -11,12 +10,13 @@ import Overview from './Components/Overview';
 
 function App() {
     let transactions = { purchaseTotal: 0, totalCount: 0, totalOz: 0, purchaseList: [] };
+    const Helper = PurchaseHelper();
 
-    BioData.purchases.map((purchase) => {
-        transactions.purchaseTotal += purchase.discount || FounderData.DEFAULT_DISCOUNT;
+    MemberData.purchases.map((purchase) => {
+        transactions.purchaseTotal += purchase.discount || HalcyonDefaults.DEFAULT_DISCOUNT;
         transactions.totalCount++;
-        transactions.totalOz += purchase.oz || FounderData.DEFAULT_OZ;
-        transactions.purchaseList.push(BeerData.GetBeerName(purchase.beer) || purchase.beer);
+        transactions.totalOz += purchase.oz || HalcyonDefaults.DEFAULT_OZ;
+        transactions.purchaseList.push(GetBeerName(purchase.beer) || purchase.beer);
     });
 
     const investmentDataset = {
@@ -24,20 +24,20 @@ function App() {
         items: [
             {
                 label: 'investment date',
-                value: calculateInvestmentDate(BioData.foundedDate),
+                value: Helper.FormatDate(MemberData.foundedDate),
                 isSmall: true,
             },
             {
                 label: 'days as member',
-                value: calculateDaysInvested(BioData.foundedDate),
+                value: Helper.CalculateDaysInvested(MemberData.foundedDate),
             },
             {
                 label: 'paid off',
-                value: calculatePercentPaidOff(transactions.purchaseTotal, FounderData.INVESTMENT_TOTAL),
+                value: Helper.CalculatePercentPaidOff(transactions.purchaseTotal, HalcyonDefaults.INVESTMENT_TOTAL),
             },
             {
                 label: 'payoff date',
-                value: calculatePayoffDate(BioData.foundedDate, transactions.purchaseTotal, FounderData.INVESTMENT_TOTAL),
+                value: Helper.CalculatePayoffDate(MemberData.foundedDate, transactions.purchaseTotal, HalcyonDefaults.INVESTMENT_TOTAL),
                 isSmall: true,
             },
         ],
@@ -64,16 +64,16 @@ function App() {
     const drinkingDataset = {
         title: 'Drinking details',
         items: [
-            { label: 'wet days', value: calculateWetDays(BioData.foundedDate, BioData.purchases) },
-            { label: 'dry days', value: calculateDryDays(BioData.foundedDate, BioData.purchases) },
+            { label: 'wet days', value: Helper.CalculateWetDays(MemberData.foundedDate, MemberData.purchases) },
+            { label: 'dry days', value: Helper.CalculateDryDays(MemberData.foundedDate, MemberData.purchases) },
         ],
     };
 
     return (
         <div class="container">
             <h1>HALCYONvestment</h1>
-            <Bio bio={BioData} />
-            <Overview founder={FounderData} transactions={transactions} />
+            <Bio bio={MemberData} />
+            <Overview founder={HalcyonDefaults} transactions={transactions} />
             <ChartPurchases />
             <Dataset dataset={investmentDataset} />
             <Dataset dataset={beerDataset} />

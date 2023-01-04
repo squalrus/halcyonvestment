@@ -1,10 +1,10 @@
-import 'chartjs-adapter-date-fns';
-import { ReactChart } from 'chartjs-react';
-import { LineController, LineElement, PointElement, CategoryScale, LinearScale, TimeScale, Filler, Tooltip } from 'chart.js';
 import React from 'react';
-import BeerData from '../Data/BeerData';
-import BioData from '../Data/BioData';
-import FounderData from '../Data/FounderData';
+import 'chartjs-adapter-date-fns';
+import { LineController, LineElement, PointElement, CategoryScale, LinearScale, TimeScale, Filler, Tooltip } from 'chart.js';
+import { ReactChart } from 'chartjs-react';
+
+import { BeerData, HalcyonDefaults } from '../Data/HalcyonData';
+import { MemberData } from '../Data/MemberData';
 
 ReactChart.register(LineController, LineElement, PointElement, CategoryScale, LinearScale, TimeScale, Filler, Tooltip);
 
@@ -37,14 +37,14 @@ const chartOptions = {
 
 let investmentTotal = 0;
 
-let founded = [{ x: BioData.foundedDate, y: 0 }];
+let founded = [{ x: MemberData.foundedDate, y: 0 }];
 
-let dataset = BioData.purchases.map(function (element) {
-    const beer = BeerData.BeerData.filter((item) => {
+let dataset = MemberData.purchases.map(function (element) {
+    const beer = BeerData.filter((item) => {
         return item.id == element.beer;
     })[0];
 
-    investmentTotal += element.discount || FounderData.DEFAULT_DISCOUNT;
+    investmentTotal += element.discount || HalcyonDefaults.DEFAULT_DISCOUNT;
 
     return {
         x: element.date,

@@ -1,10 +1,11 @@
-import 'chartjs-adapter-date-fns';
-import { ReactChart } from 'chartjs-react';
-import { BarController, BarElement, CategoryScale, LinearScale, Tooltip } from 'chart.js';
 import React from 'react';
-import BeerData from '../Data/BeerData';
-import BioData from '../Data/BioData';
-import BeerColors from '../Helpers/BeerColors';
+import 'chartjs-adapter-date-fns';
+import { BarController, BarElement, CategoryScale, LinearScale, Tooltip } from 'chart.js';
+import { ReactChart } from 'chartjs-react';
+
+import { ColorHelper } from '../Helpers/ColorHelper';
+import { BeerData } from '../Data/HalcyonData';
+import { MemberData } from '../Data/MemberData';
 
 ReactChart.register(BarController, BarElement, CategoryScale, LinearScale, Tooltip);
 
@@ -18,8 +19,8 @@ const chartOptions = {
 
 let chartData = {};
 
-BioData.purchases.forEach((element) => {
-    const beer = BeerData.BeerData.filter((item) => {
+MemberData.purchases.forEach((element) => {
+    const beer = BeerData.filter((item) => {
         return item.id == element.beer;
     })[0];
 
@@ -49,7 +50,7 @@ const data = {
         {
             label: 'Beers',
             data: beerData.map((key) => key.count),
-            backgroundColor: BeerColors(beerData.length),
+            backgroundColor: ColorHelper(beerData.length),
             barThickness: 'flex',
             borderColor: '#100c00',
             borderWidth: 1,
