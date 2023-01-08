@@ -59,7 +59,7 @@ const data = {
 };
 
 const ChartBeer = () => {
-    return <ReactChart type="bar" data={data} options={chartOptions} height={1600} />;
+    return <ReactChart type="bar" data={data} options={chartOptions} height={800} />;
 };
 
 export default ChartBeer;
