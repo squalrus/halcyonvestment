@@ -115,6 +115,7 @@ export const MemberData = {
         { date: '2022-09-05', beer: 'highly-classified' },
         { date: '2022-09-08', beer: 'highly-classified' },
         { date: '2022-09-08', beer: 'suit-and-tie' },
+        { date: '2022-09-13', beer: 'sparkling-clusters' },
         { date: '2022-09-16', beer: 'sparkling-clusters' },
         { date: '2022-09-16', beer: 'highly-classified' },
         { date: '2022-09-22', beer: 'highly-classified' },
