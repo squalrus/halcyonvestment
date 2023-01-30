@@ -147,5 +147,9 @@ export const MemberData = {
         { date: '2023-01-02', beer: 'bullet-train' },
         { date: '2023-01-06', beer: 'mark-of-the-yeast' },
         { date: '2023-01-06', beer: 'bullet-train' },
+        { date: '2023-01-21', beer: 'ube-your-thirst' },
+        { date: '2023-01-21', beer: 'ube-your-thirst' },
+        { date: '2023-01-21', beer: 'first-dream' },
+        { date: '2023-01-29', beer: 'first-dream' },
     ],
 };
