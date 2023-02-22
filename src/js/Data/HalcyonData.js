@@ -16,6 +16,7 @@ export const BeerData = [
     { id: 'frosted-wheat', name: 'Frosted Wheat Cold Wheat', note: 'Collaboration with Lad and Lass' },
     { id: 'good-vibes', name: 'Only Good Vibes', note: 'IPA Citrus/Tropical' },
     { id: 'hanami-hazy', name: 'Hanami Hazy IPA' },
+    { id: 'high-altitude-spy-balloon', name: 'High Altitude Spy Balloon', note: 'Dark Lager' },
     { id: 'highly-classified', name: 'Highly Classified' },
     { id: 'honey-lager', name: 'Hawaiian Honey Lager', note: 'Collaboration with Lucky Envelope' },
     { id: 'hop-grinder', name: 'Hop Grinder', notes: 'Hazy IPA' },
