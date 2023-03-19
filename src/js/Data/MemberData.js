@@ -165,5 +165,7 @@ export const MemberData = {
         { date: '2023-03-10', beer: 'huckster' },
         { date: '2023-03-10', beer: 'low-flying-naked-bird' },
         { date: '2023-03-10', beer: 'high-altitude-spy-balloon' },
+        { date: '2023-03-19', beer: 'green-beer' },
+        { date: '2023-03-19', beer: 'high-altitude-spy-balloon' },
     ],
 };
