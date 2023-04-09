@@ -167,5 +167,12 @@ export const MemberData = {
         { date: '2023-03-10', beer: 'high-altitude-spy-balloon' },
         { date: '2023-03-19', beer: 'green-beer' },
         { date: '2023-03-19', beer: 'high-altitude-spy-balloon' },
+        { date: '2023-04-02', beer: 'bullet-train-south-bound' },
+        { date: '2023-04-07', beer: 'good-vibes' },
+        { date: '2023-04-07', beer: 'bullet-train-south-bound' },
+        { date: '2023-04-09', beer: 'good-vibes' },
+        { date: '2023-04-09', beer: 'bullet-train-south-bound' },
+        { date: '2023-04-15', beer: 'hanami-hazy' },
+        { date: '2023-04-15', beer: 'high-altitude-spy-balloon' },
     ],
 };

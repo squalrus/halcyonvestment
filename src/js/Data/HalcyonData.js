@@ -7,6 +7,7 @@ export const HalcyonDefaults = {
 export const BeerData = [
     { id: 'boolong-hand', name: 'Boolong Hand', note: 'NZ Pilsner w/ Oolong and Buddahs hand tea' },
     { id: 'bullet-train', name: 'Bullet Train Pale' },
+    { id: 'bullet-train-south-bound', name: 'Bullet Train Pale' },
     { id: 'calvin-and-hops', name: 'Calvin And Hops IPA' },
     { id: 'casino-tour', name: 'Casino Tour', note: 'NZ Keller Bier, Collaboration with Burke Gilman' },
     { id: 'charmed-sea', name: 'Charmed Sea Hazy IPA', note: 'Hazy IPA' },
