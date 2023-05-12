@@ -6,12 +6,13 @@ export const HalcyonDefaults = {
 
 export const BeerData = [
     { id: 'boolong-hand', name: 'Boolong Hand', note: 'NZ Pilsner w/ Oolong and Buddahs hand tea' },
-    { id: 'bullet-train', name: 'Bullet Train Pale' },
     { id: 'bullet-train-south-bound', name: 'Bullet Train Pale' },
+    { id: 'bullet-train', name: 'Bullet Train Pale' },
     { id: 'calvin-and-hops', name: 'Calvin And Hops IPA' },
     { id: 'casino-tour', name: 'Casino Tour', note: 'NZ Keller Bier, Collaboration with Burke Gilman' },
     { id: 'charmed-sea', name: 'Charmed Sea Hazy IPA', note: 'Hazy IPA' },
     { id: 'dry-tiny-ipa', name: 'Dry Tiny Horses', note: 'WC IPA' },
+    { id: 'fine-point-friend', name: 'Fine Point Friend', note: 'Kolsch' },
     { id: 'first-dream', name: 'First Dream', note: 'IPA' },
     { id: 'friendly-wave', name: 'Friendly Wave IPA', note: 'West Coast' },
     { id: 'frosted-wheat', name: 'Frosted Wheat Cold Wheat', note: 'Collaboration with Lad and Lass' },
@@ -36,6 +37,7 @@ export const BeerData = [
     { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
     { id: 'sparkling-clusters', name: 'Sparkling Clusters', note: 'Hazy IPA' },
     { id: 'suit-and-tie', name: 'Suit and Tie', note: 'CDA, Collaboration with Big Time' },
+    { id: 'terp-motivation', name: 'Terp Motivation', note: 'IPA' },
     { id: 'ube-your-thirst', name: 'Ube Your Thirst', note: 'Ube Lager' },
     { id: 'urban-hike', name: 'Urban Hike', note: 'Hoppy Rice Lager' },
     { id: 'very-serious-young-man', name: 'Very Serious Young Man', note: 'Double IPA' },

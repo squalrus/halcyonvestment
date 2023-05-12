@@ -174,5 +174,9 @@ export const MemberData = {
         { date: '2023-04-09', beer: 'bullet-train-south-bound' },
         { date: '2023-04-15', beer: 'hanami-hazy' },
         { date: '2023-04-15', beer: 'high-altitude-spy-balloon' },
+        { date: '2023-04-15', beer: 'high-altitude-spy-balloon' },
+        { date: '2023-04-30', beer: 'terp-motivation' },
+        { date: '2023-04-30', beer: 'fine-point-friend' },
+        { date: '2023-05-06', beer: 'high-altitude-spy-balloon' },
     ],
 };
