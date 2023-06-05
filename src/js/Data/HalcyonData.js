@@ -28,6 +28,7 @@ export const BeerData = [
     { id: 'keller-bitter', name: 'KellerBitter' },
     { id: 'kiwi-fisher', name: 'Kiwi Fisher', note: 'NZ Pilsner' },
     { id: 'low-flying-naked-bird', name: 'Low Flying Naked Bird', note: 'Saison' },
+    { id: 'magic-hour', name: 'Magic Hour', note: 'Altbier' },
     { id: 'mark-of-the-yeast', name: 'Mark of the Yeast', note: 'Hazy IPA' },
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
     { id: 'our-good-friends', name: 'Our Good Friends', note: 'Dark Lager, Collaboration with Standard' },
