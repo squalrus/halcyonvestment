@@ -182,5 +182,14 @@ export const MemberData = {
         { date: '2023-05-27', beer: 'stay-awhile' },
         { date: '2023-06-02', beer: 'magic-hour' },
         { date: '2023-06-04', beer: 'magic-hour' },
+
+        { date: '2023-06-11', beer: 'magic-hour' },
+
+        { date: '2023-06-25', beer: 'stay-awhile' },
+        { date: '2023-06-25', beer: 'fine-point-friend' },
+        { date: '2023-06-25', beer: 'magic-hour' },
+        { date: '2023-06-25', beer: 'magic-hour' },
+
+        { date: '2023-07-01', beer: 'stay-awhile' },
     ],
 };
