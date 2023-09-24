@@ -2,6 +2,7 @@ export const MemberData = {
     name: 'Chad',
     memberId: 19,
     foundedDate: '2022-01-02',
+    // hagandlagfest: 2023-07-29
     purchases: [
         { date: '2022-01-02', beer: 'charmed-sea' },
         { date: '2022-01-09', beer: 'charmed-sea' },
@@ -182,14 +183,17 @@ export const MemberData = {
         { date: '2023-05-27', beer: 'stay-awhile' },
         { date: '2023-06-02', beer: 'magic-hour' },
         { date: '2023-06-04', beer: 'magic-hour' },
-
         { date: '2023-06-11', beer: 'magic-hour' },
-
         { date: '2023-06-25', beer: 'stay-awhile' },
         { date: '2023-06-25', beer: 'fine-point-friend' },
         { date: '2023-06-25', beer: 'magic-hour' },
         { date: '2023-06-25', beer: 'magic-hour' },
-
         { date: '2023-07-01', beer: 'stay-awhile' },
+        { date: '2023-09-01', beer: 'double-hover-hands' },
+        { date: '2023-09-01', beer: 'cornographic-images' },
+        { date: '2023-09-10', beer: 'magic-hour' },
+        { date: '2023-09-10', beer: 'magic-hour' },
+        { date: '2023-09-22', beer: 'midnight-coterie' },
+        { date: '2023-09-22', beer: 'midnight-coterie' },
     ],
 };
