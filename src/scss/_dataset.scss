@@ -5,8 +5,8 @@
 }
 .dataset__item {
     align-items: center;
-    background-color: #eee;
-    border: 2px solid #ccc;
+    background-color: #eeeeee;
+    border: 2px solid #cccccc;
     display: flex;
     padding: 10px;
     gap: 5%;
@@ -16,7 +16,7 @@
     font-size: 1.8em;
     font-weight: 700;
     text-align: right;
-    width: 62.5%;
+    width: 50%;
 
     @media (min-width: 800px) {
         font-size: 6em;
