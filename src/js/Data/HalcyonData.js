@@ -11,6 +11,8 @@ export const BeerData = [
     { id: 'calvin-and-hops', name: 'Calvin And Hops IPA' },
     { id: 'casino-tour', name: 'Casino Tour', note: 'NZ Keller Bier, Collaboration with Burke Gilman' },
     { id: 'charmed-sea', name: 'Charmed Sea Hazy IPA', note: 'Hazy IPA' },
+    { id: 'cloud-jockey', name: 'Cloud Jockey', note: 'IPA' },
+    { id: 'cone-smasher-7000', name: 'Cone Smasher 7000', note: 'Fresh Hop IPA' },
     { id: 'cornographic-images', name: 'Cornographic Images', note: 'Corn Lager' },
     { id: 'double-hover-hands', name: 'Double Hover Hands', note: 'Hazy with Crucible/Mirage' },
     { id: 'dry-tiny-ipa', name: 'Dry Tiny Horses', note: 'WC IPA' },
