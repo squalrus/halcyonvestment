@@ -198,5 +198,9 @@ export const MemberData = {
         { date: '2023-10-20', beer: 'midnight-coterie' },
         { date: '2023-10-20', beer: 'cloud-jockey' },
         { date: '2023-10-20', beer: 'cone-smasher-7000' },
+        { date: '2023-10-29', beer: 'ube-your-thirst' },
+        { date: '2023-10-29', beer: 'cone-smasher-7000' },
+        { date: '2023-11-03', beer: 'ube-your-thirst' },
+        { date: '2023-11-03', beer: 'midnight-coterie' },
     ],
 };
