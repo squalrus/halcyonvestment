@@ -45,7 +45,7 @@ export const BeerData = [
     { id: 'stay-awhile', name: 'Stay Awile', note: 'IPA' },
     { id: 'suit-and-tie', name: 'Suit and Tie', note: 'CDA, Collaboration with Big Time' },
     { id: 'terp-motivation', name: 'Terp Motivation', note: 'IPA' },
-    { id: 'ube-your-thirst', name: 'Ube Your Thirst', note: 'Ube Lager' },
+    { id: 'ube-your-thirst', name: 'Ube Your Thirst', note: 'Ube Rice Lager' },
     { id: 'urban-hike', name: 'Urban Hike', note: 'Hoppy Rice Lager' },
     { id: 'very-serious-young-man', name: 'Very Serious Young Man', note: 'Double IPA' },
     { id: 'we-say-gay', name: 'We Say Gay' },
