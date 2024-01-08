@@ -212,5 +212,6 @@ export const MemberData = {
         { date: '2023-12-17', beer: 'hail-the-sun' },
         { date: '2023-12-17', beer: 'the-eleventh-hour' },
         { date: '2023-12-17', beer: 'hail-the-sun', oz: 9.6, discount: 1 },
+        { date: '2024-01-01', beer: 'the-eleventh-hour' },
     ],
 };
