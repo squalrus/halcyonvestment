@@ -50,6 +50,7 @@ export const BeerData = [
     { id: 'suit-and-tie', name: 'Suit and Tie', note: 'CDA, Collaboration with Big Time' },
     { id: 'terp-motivation', name: 'Terp Motivation', note: 'IPA' },
     { id: 'the-eleventh-hour', name: 'Barrel Aged Dark Lager' },
+    { id: 'this-is-an-art-project', name: 'This Is An Art Project', note: 'IPA' },
     { id: 'ube-your-thirst', name: 'Ube Your Thirst', note: 'Ube Rice Lager' },
     { id: 'urban-hike', name: 'Urban Hike', note: 'Hoppy Rice Lager' },
     { id: 'very-serious-young-man', name: 'Very Serious Young Man', note: 'Double IPA' },
