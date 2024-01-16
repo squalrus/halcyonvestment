@@ -215,5 +215,7 @@ export const MemberData = {
         { date: '2024-01-01', beer: 'the-eleventh-hour' },
         { date: '2024-01-12', beer: 'this-is-an-art-project' },
         { date: '2024-01-12', beer: 'the-eleventh-hour' },
+        { date: '2024-01-15', beer: 'this-is-an-art-project' },
+        { date: '2024-01-15', beer: 'pilsner' },
     ],
 };
