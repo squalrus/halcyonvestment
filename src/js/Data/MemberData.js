@@ -221,5 +221,9 @@ export const MemberData = {
         { date: '2024-01-19', beer: 'hail-the-sun' },
         { date: '2024-02-01', beer: 'magic-hour' },
         { date: '2024-02-01', beer: 'midnight-coterie' },
+        { date: '2024-02-09', beer: 'safety-goggles' },
+        { date: '2024-02-09', beer: 'hail-the-sun' },
+        { date: '2024-02-10', beer: 'safety-goggles' },
+        { date: '2024-02-10', beer: 'magic-hour' },
     ],
 };

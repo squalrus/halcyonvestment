@@ -42,6 +42,7 @@ export const BeerData = [
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
     { id: 'our-good-friends', name: 'Our Good Friends', note: 'Dark Lager, Collaboration with Standard' },
     { id: 'pilsner', name: 'Halcyon Pilsner' },
+    { id: 'safety-goggles', name: 'Safety Goggles' },
     { id: 'save-the-snake', name: 'Save the Snake', note: 'Lager, Collaboration with Stoup and WA Wild' },
     { id: 'so-fresh-so-green', name: 'So Fresh and So Green', note: 'Dry Hopped, Collaboration with Big Time Brewery' },
     { id: 'soft-metal', name: 'Soft Metal', note: 'French-style Pilsner' },
