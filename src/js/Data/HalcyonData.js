@@ -35,6 +35,7 @@ export const BeerData = [
     { id: 'keller-bitter', name: 'KellerBitter' },
     { id: 'kellerbier', name: 'Kellerbier' },
     { id: 'kiwi-fisher', name: 'Kiwi Fisher', note: 'NZ Pilsner' },
+    { id: 'lny-lager', name: 'LNY Lager', note: 'Kumquat Oolong' },
     { id: 'low-flying-naked-bird', name: 'Low Flying Naked Bird', note: 'Saison' },
     { id: 'magic-hour', name: 'Magic Hour', note: 'Altbier' },
     { id: 'mark-of-the-yeast', name: 'Mark of the Yeast', note: 'Hazy IPA' },
