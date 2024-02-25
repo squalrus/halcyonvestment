@@ -42,6 +42,7 @@ export const BeerData = [
     { id: 'midnight-coterie', name: 'Midnight Coterie', note: 'Dark Lager' },
     { id: 'nz-pilsner', name: 'New Zealand Pilsner', note: 'NZ Pilsner' },
     { id: 'our-good-friends', name: 'Our Good Friends', note: 'Dark Lager, Collaboration with Standard' },
+    { id: 'party-of-five', name: 'Party of Five', note: 'Pale' },
     { id: 'pilsner', name: 'Halcyon Pilsner' },
     { id: 'safety-goggles', name: 'Safety Goggles' },
     { id: 'save-the-snake', name: 'Save the Snake', note: 'Lager, Collaboration with Stoup and WA Wild' },
