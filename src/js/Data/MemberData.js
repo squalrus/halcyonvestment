@@ -242,5 +242,10 @@ export const MemberData = {
         { date: '2024-03-22', beer: 'sky-dance' },
         { date: '2024-03-22', beer: 'city-stroll' },
         { date: '2024-03-22', beer: 'good-vibes' },
+        { date: '2024-03-24', beer: 'stop-collamberate' },
+        { date: '2024-04-08', beer: 'stop-collamberate' },
+        { date: '2024-04-08', beer: 'magic-hour' },
+        { date: '2024-04-21', beer: 'various-hobbies' },
+        { date: '2024-04-21', beer: 'magic-hour' },
     ],
 };
