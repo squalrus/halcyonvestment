@@ -250,5 +250,8 @@ export const MemberData = {
         { date: '2024-05-01', beer: 'urban-hike' },
         { date: '2024-05-01', beer: 'safety-goggles' },
         { date: '2024-05-01', beer: 'magic-hour' },
+        { date: '2024-05-08', beer: 'safety-goggles' },
+        { date: '2024-05-12', beer: 'safety-goggles' },
+        { date: '2024-05-12', beer: 'magic-hour' },
     ],
 };
