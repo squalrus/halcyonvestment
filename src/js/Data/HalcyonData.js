@@ -19,6 +19,7 @@ export const BeerData = [
     { id: 'double-hover-hands', name: 'Double Hover Hands', note: 'Hazy with Crucible/Mirage' },
     { id: 'dreaming-of-sunshine', name: 'Dreaming of Sunshine', note: 'West Coast Pilsner with Breakside Brewing' },
     { id: 'dry-tiny-ipa', name: 'Dry Tiny Horses', note: 'WC IPA' },
+    { id: 'fer-sure', name: 'Fer Sure', note: 'NZ Pilsner' },
     { id: 'fine-point-friend', name: 'Fine Point Friend', note: 'Kolsch' },
     { id: 'first-dream', name: 'First Dream', note: 'IPA' },
     { id: 'friendly-wave', name: 'Friendly Wave IPA', note: 'West Coast' },
