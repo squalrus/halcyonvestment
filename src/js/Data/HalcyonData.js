@@ -5,6 +5,7 @@ export const HalcyonDefaults = {
 };
 
 export const BeerData = [
+    { id: 'best-in-show', name: 'Best In Show', note: '2024 Greenwood Car Show IPA' },
     { id: 'boolong-hand', name: 'Boolong Hand', note: 'NZ Pilsner w/ Oolong and Buddahs hand tea' },
     { id: 'bullet-train-south-bound', name: 'Bullet Train Pale' },
     { id: 'bullet-train', name: 'Bullet Train Pale' },
@@ -35,6 +36,7 @@ export const BeerData = [
     { id: 'hop-grinder', name: 'Hop Grinder', notes: 'Hazy IPA' },
     { id: 'huckster', name: 'Huckster', note: 'Helles Lager' },
     { id: 'hydra-ponic', name: 'Hydra-ponic Pale', note: 'Collaboration with Breakthru Brewing' },
+    { id: 'instant-gratification', name: 'Instant Gratification', note: 'Macha Green Tea Lemon Lager' },
     { id: 'keller-bitter', name: 'KellerBitter' },
     { id: 'kellerbier', name: 'Kellerbier' },
     { id: 'kiwi-fisher', name: 'Kiwi Fisher', note: 'NZ Pilsner' },
