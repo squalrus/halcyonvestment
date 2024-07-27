@@ -10,6 +10,7 @@ export const BeerData = [
     { id: 'bullet-train-south-bound', name: 'Bullet Train Pale' },
     { id: 'bullet-train', name: 'Bullet Train Pale' },
     { id: 'calvin-and-hops', name: 'Calvin And Hops IPA' },
+    { id: 'careless-whisper', name: 'Careless Whisper', note: 'Blood Orange Rosemary Raddler' },
     { id: 'casino-tour', name: 'Casino Tour', note: 'NZ Keller Bier, Collaboration with Burke Gilman' },
     { id: 'chaos', name: 'Chaos', note: 'Oatmeal Stout with Bigtime Brewing' },
     { id: 'charmed-sea', name: 'Charmed Sea Hazy IPA', note: 'Hazy IPA' },
