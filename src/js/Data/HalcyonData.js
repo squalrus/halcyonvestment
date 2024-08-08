@@ -6,6 +6,7 @@ export const HalcyonDefaults = {
 
 export const BeerData = [
     { id: 'best-in-show', name: 'Best In Show', note: '2024 Greenwood Car Show IPA' },
+    { id: 'bg-smoked-amber', name: 'Burke-Gilman Smoked Amber' },
     { id: 'boolong-hand', name: 'Boolong Hand', note: 'NZ Pilsner w/ Oolong and Buddahs hand tea' },
     { id: 'bullet-train-south-bound', name: 'Bullet Train Pale' },
     { id: 'bullet-train', name: 'Bullet Train Pale' },
