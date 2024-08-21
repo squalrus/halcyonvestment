@@ -7,6 +7,7 @@ export const HalcyonDefaults = {
 export const BeerData = [
     { id: 'best-in-show', name: 'Best In Show', note: '2024 Greenwood Car Show IPA' },
     { id: 'bg-smoked-amber', name: 'Burke-Gilman Smoked Amber' },
+    { id: 'big-zipper', name: 'Big Zipper', note: 'Keller Pilsner with Ya Ya' },
     { id: 'boolong-hand', name: 'Boolong Hand', note: 'NZ Pilsner w/ Oolong and Buddahs hand tea' },
     { id: 'bullet-train-south-bound', name: 'Bullet Train Pale' },
     { id: 'bullet-train', name: 'Bullet Train Pale' },
@@ -67,6 +68,7 @@ export const BeerData = [
     { id: 'urban-hike', name: 'Urban Hike', note: 'Hoppy Rice Lager' },
     { id: 'various-hobbies', name: 'Various Hobbies', note: 'Hazy IPA' },
     { id: 'very-serious-young-man', name: 'Very Serious Young Man', note: 'Double IPA' },
+    { id: 'watucky', name: 'Watucky Corn Snack', note: 'Collaboration with Big Time and Ladd & Lass' },
     { id: 'we-say-gay', name: 'We Say Gay' },
 ];
 

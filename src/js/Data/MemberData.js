@@ -277,5 +277,8 @@ export const MemberData = {
         { date: '2024-07-31', beer: 'friendly-wave' },
         { date: '2024-08-11', beer: 'best-in-show' },
         { date: '2024-08-11', beer: 'midnight-coterie' },
+        { date: '2024-08-18', beer: 'watucky' },
+        { date: '2024-08-18', beer: 'watucky' },
+        { date: '2024-08-18', beer: 'big-zipper' },
     ],
 };
