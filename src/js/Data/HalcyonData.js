@@ -41,6 +41,7 @@ export const BeerData = [
     { id: 'hydra-ponic', name: 'Hydra-ponic Pale', note: 'Collaboration with Breakthru Brewing' },
     { id: 'instant-gratification', name: 'Instant Gratification', note: 'Macha Green Tea Lemon Lager' },
     { id: 'keller-bitter', name: 'KellerBitter' },
+    { id: 'kellerbier-fh', name: 'Fresh Hop Kellerbier' },
     { id: 'kellerbier', name: 'Kellerbier' },
     { id: 'kiwi-fisher', name: 'Kiwi Fisher', note: 'NZ Pilsner' },
     { id: 'lny-lager', name: 'LNY Lager', note: 'Kumquat Oolong' },
